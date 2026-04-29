@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BM Remates – Jersey Selección México 2026 al Mayoreo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            verde: '#0A5C2A',
+            rojo: '#C8102E',
+          },
+          fontFamily: {
+            barlow: ['"Barlow Condensed"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Barlow Condensed', sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    /* subtle aztec pattern overlay */
+    .aztec-overlay {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M30 0L60 30L30 60L0 30z'/%3E%3Ccircle cx='30' cy='30' r='8'/%3E%3Crect x='26' y='26' width='8' height='8'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hero-bg {
+      background-image: linear-gradient(to bottom, rgba(10,92,42,0.75) 0%, rgba(10,92,42,0.55) 50%, rgba(0,0,0,0.7) 100%), url('https://019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98.claudeusercontent.com/v1/design/projects/019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98/serve/uploads/jersey-producto.png?t=3be03a7ed9266a26aea86ec8effa2e34cef79656be505e0a49288534c6048728.dd9140b5-21c6-494e-8163-474f62d0574c.15a36625-d9d1-44d8-ab69-6372bf1be3d6.1777448047');
+      background-size: cover;
+      background-position: center top;
+    }
+
+    @keyframes pulse-wa {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+      50% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+    }
+    .wa-float { animation: pulse-wa 2s infinite; }
+
+    .card-highlight {
+      background: #C8102E;
+      color: white;
+      transform: scale(1.04);
+    }
+    .card-normal {
+      background: white;
+      border: 2px solid #e5e7eb;
+    }
+
+    .step-line::after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 40px;
+      background: #0A5C2A;
+      margin: 8px auto 0;
+      opacity: 0.25;
+    }
+    .step-line:last-child::after { display: none; }
+
+    .gallery-img {
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-barlow">
+
+  <!-- ===== HEADER FIJO ===== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="https://019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98.claudeusercontent.com/v1/design/projects/019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98/serve/uploads/jersey-producto.png?t=3be03a7ed9266a26aea86ec8effa2e34cef79656be505e0a49288534c6048728.dd9140b5-21c6-494e-8163-474f62d0574c.15a36625-d9d1-44d8-ab69-6372bf1be3d6.1777448047" alt="BM Remates Logo" class="h-10 w-10 object-contain hidden" />
+        <img src="https://019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98.claudeusercontent.com/v1/design/projects/019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98/serve/uploads/bm-remates-white.png?t=3be03a7ed9266a26aea86ec8effa2e34cef79656be505e0a49288534c6048728.dd9140b5-21c6-494e-8163-474f62d0574c.15a36625-d9d1-44d8-ab69-6372bf1be3d6.1777448047" alt="BM Remates" class="hidden" />
+        <!-- Logo construido con texto + ícono -->
+        <img src="https://019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98.claudeusercontent.com/v1/design/projects/019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98/serve/uploads/BM%20REMATES.png?t=3be03a7ed9266a26aea86ec8effa2e34cef79656be505e0a49288534c6048728.dd9140b5-21c6-494e-8163-474f62d0574c.15a36625-d9d1-44d8-ab69-6372bf1be3d6.1777448047" alt="BM Remates" class="h-12 w-auto object-contain" />
+      </div>
+
+      <!-- WhatsApp CTA -->
+      <a href="https://wa.me/5215631808826" target="_blank" rel="noopener"
+         class="flex items-center gap-2 bg-verde text-white font-bold uppercase tracking-wide text-sm px-4 py-2 rounded-full hover:bg-green-800 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-4 h-4 fill-white shrink-0">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="hidden sm:inline">56 3180 8826</span>
+        <span class="sm:hidden">WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-bg aztec-overlay min-h-screen flex items-end pb-16 pt-20">
+    <div class="max-w-5xl mx-auto px-4 w-full">
+      <div class="max-w-xl">
+        <!-- Badge -->
+        <span class="inline-block bg-rojo text-white text-xs font-bold uppercase tracking-widest px-3 py-1 mb-4 rounded-sm">
+          Mayoreo · World Cup 2026
+        </span>
+        <!-- Headline -->
+        <h1 class="text-white font-black uppercase leading-none mb-3" style="font-size: clamp(2.8rem, 8vw, 5rem); text-shadow: 0 2px 20px rgba(0,0,0,0.4); line-height:0.95;">
+          Jersey<br/>
+          <span class="text-white">Selección</span><br/>
+          <span style="color:#ffffff; -webkit-text-stroke: 2px #ffffff;">México 2026</span>
+        </h1>
+        <!-- Sub -->
+        <p class="text-white/90 font-semibold uppercase tracking-widest text-base mb-8" style="letter-spacing:0.15em;">
+          Diseño azteca &nbsp;·&nbsp; Tallas M &nbsp;L &nbsp;XL &nbsp;2XL
+        </p>
+        <!-- CTA -->
+        <a href="https://wa.me/5215631808826?text=Hola,%20quiero%20pedir%20jerseys%20al%20mayoreo" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-3 bg-verde text-white font-black uppercase text-xl px-8 py-4 rounded-full shadow-2xl hover:bg-green-800 transition-all hover:scale-105 active:scale-100">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white shrink-0">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Pedir por WhatsApp
+        </a>
+        <!-- Precio desde -->
+        <p class="text-white/70 text-sm font-semibold mt-4 uppercase tracking-wider">Desde $150 pesos por pieza · Envío a toda la República</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRECIOS ===== -->
+  <section id="precios" class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-verde font-black uppercase text-4xl md:text-5xl text-center mb-2 tracking-tight">Precios al Mayoreo</h2>
+      <p class="text-center text-gray-500 font-semibold uppercase tracking-widest text-sm mb-10">Mientras más pides, más ahorras</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
+
+        <!-- Card 1 -->
+        <div class="card-normal rounded-2xl p-8 text-center shadow-sm">
+          <div class="text-verde font-black uppercase text-sm tracking-widest mb-4">Pieza suelta</div>
+          <div class="text-gray-900 font-black" style="font-size:3.5rem; line-height:1;">$350</div>
+          <div class="text-gray-400 font-semibold text-sm mb-6">por jersey</div>
+          <div class="text-gray-600 font-semibold text-sm uppercase tracking-wide">1 – 49 piezas</div>
+          <a href="https://wa.me/5215631808826?text=Hola,%20quiero%20pedir%201%20jersey" target="_blank" rel="noopener"
+             class="mt-6 block border-2 border-verde text-verde font-black uppercase text-sm px-6 py-3 rounded-full hover:bg-verde hover:text-white transition-colors">
+            Pedir ahora
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-normal rounded-2xl p-8 text-center shadow-sm">
+          <div class="text-verde font-black uppercase text-sm tracking-widest mb-4">Medio mayoreo</div>
+          <div class="text-gray-900 font-black" style="font-size:3.5rem; line-height:1;">$175</div>
+          <div class="text-gray-400 font-semibold text-sm mb-6">por jersey</div>
+          <div class="text-gray-600 font-semibold text-sm uppercase tracking-wide">50 – 99 piezas</div>
+          <a href="https://wa.me/5215631808826?text=Hola,%20quiero%20pedir%2050%20jerseys%20al%20mayoreo" target="_blank" rel="noopener"
+             class="mt-6 block border-2 border-verde text-verde font-black uppercase text-sm px-6 py-3 rounded-full hover:bg-verde hover:text-white transition-colors">
+            Pedir ahora
+          </a>
+        </div>
+
+        <!-- Card 3 – Destacada -->
+        <div class="card-highlight rounded-2xl p-8 text-center shadow-2xl relative overflow-hidden">
+          <div class="absolute top-3 right-3 bg-yellow-400 text-yellow-900 font-black text-xs uppercase px-2 py-0.5 rounded-full tracking-wider">Mejor precio</div>
+          <div class="text-white/80 font-black uppercase text-sm tracking-widest mb-4">Mayoreo full</div>
+          <div class="text-white font-black" style="font-size:3.5rem; line-height:1;">$150</div>
+          <div class="text-white/70 font-semibold text-sm mb-6">por jersey</div>
+          <div class="text-white font-semibold text-sm uppercase tracking-wide">100+ piezas</div>
+          <a href="https://wa.me/5215631808826?text=Hola,%20quiero%20pedir%20100%20jerseys%20al%20mayoreo" target="_blank" rel="noopener"
+             class="mt-6 block bg-white text-rojo font-black uppercase text-sm px-6 py-3 rounded-full hover:bg-yellow-400 hover:text-yellow-900 transition-colors">
+            Pedir ahora
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section id="galeria" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-verde font-black uppercase text-4xl md:text-5xl text-center mb-2 tracking-tight">El Jersey</h2>
+      <p class="text-center text-gray-400 font-semibold uppercase tracking-widest text-sm mb-10">Diseño azteca · Calidad oficial</p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="overflow-hidden rounded-xl">
+          <img src="https://019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98.claudeusercontent.com/v1/design/projects/019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98/serve/uploads/jersey-producto.png?t=3be03a7ed9266a26aea86ec8effa2e34cef79656be505e0a49288534c6048728.dd9140b5-21c6-494e-8163-474f62d0574c.15a36625-d9d1-44d8-ab69-6372bf1be3d6.1777448047" alt="Jersey Mexico – producto" class="gallery-img hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="overflow-hidden rounded-xl">
+          <img src="https://019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98.claudeusercontent.com/v1/design/projects/019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98/serve/uploads/jersey-hombre1.png?t=3be03a7ed9266a26aea86ec8effa2e34cef79656be505e0a49288534c6048728.dd9140b5-21c6-494e-8163-474f62d0574c.15a36625-d9d1-44d8-ab69-6372bf1be3d6.1777448047" alt="Jersey Mexico – hombre ciudad" class="gallery-img hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="overflow-hidden rounded-xl">
+          <img src="https://019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98.claudeusercontent.com/v1/design/projects/019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98/serve/uploads/jersey-hombre2.png?t=3be03a7ed9266a26aea86ec8effa2e34cef79656be505e0a49288534c6048728.dd9140b5-21c6-494e-8163-474f62d0574c.15a36625-d9d1-44d8-ab69-6372bf1be3d6.1777448047" alt="Jersey Mexico – hombre calle" class="gallery-img hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="overflow-hidden rounded-xl">
+          <img src="https://019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98.claudeusercontent.com/v1/design/projects/019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98/serve/uploads/jersey-mujer1.png?t=3be03a7ed9266a26aea86ec8effa2e34cef79656be505e0a49288534c6048728.dd9140b5-21c6-494e-8163-474f62d0574c.15a36625-d9d1-44d8-ab69-6372bf1be3d6.1777448047" alt="Jersey Mexico – mujer" class="gallery-img hover:scale-105 transition-transform duration-500" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CÓMO COMPRAR ===== -->
+  <section id="como-comprar" class="py-16" style="background: #0A5C2A;">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-white font-black uppercase text-4xl md:text-5xl text-center mb-2 tracking-tight">¿Cómo comprar?</h2>
+      <p class="text-white/60 font-semibold uppercase tracking-widest text-sm text-center mb-12">Fácil, rápido y seguro</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+
+        <!-- Paso 1 -->
+        <div class="step-line flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-white/15 flex items-center justify-center mb-4 border-2 border-white/30">
+            <svg viewBox="0 0 24 24" class="w-8 h-8 fill-white">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <div class="text-yellow-400 font-black text-5xl leading-none mb-2">01</div>
+          <h3 class="text-white font-black uppercase text-xl mb-2">Escríbenos</h3>
+          <p class="text-white/70 font-medium text-base">Mándanos un mensaje por WhatsApp al <strong class="text-white">56 3180 8826</strong></p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="step-line flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-white/15 flex items-center justify-center mb-4 border-2 border-white/30">
+            <svg viewBox="0 0 24 24" class="w-8 h-8 fill-white">
+              <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+            </svg>
+          </div>
+          <div class="text-yellow-400 font-black text-5xl leading-none mb-2">02</div>
+          <h3 class="text-white font-black uppercase text-xl mb-2">Confirma tu pedido</h3>
+          <p class="text-white/70 font-medium text-base">Dinos tallas, cantidades y tu dirección de entrega</p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-white/15 flex items-center justify-center mb-4 border-2 border-white/30">
+            <svg viewBox="0 0 24 24" class="w-8 h-8 fill-white">
+              <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+          </div>
+          <div class="text-yellow-400 font-black text-5xl leading-none mb-2">03</div>
+          <h3 class="text-white font-black uppercase text-xl mb-2">Recibe tu pedido</h3>
+          <p class="text-white/70 font-medium text-base">Enviamos a <strong class="text-white">toda la República Mexicana</strong> en 2-5 días</p>
+        </div>
+
+      </div>
+
+      <!-- CTA central -->
+      <div class="text-center mt-12">
+        <a href="https://wa.me/5215631808826?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20jerseys%20al%20mayoreo" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-3 bg-white text-verde font-black uppercase text-xl px-10 py-4 rounded-full shadow-2xl hover:bg-yellow-400 hover:text-yellow-900 transition-all hover:scale-105 active:scale-100">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 shrink-0" style="fill:currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Hacer mi pedido ahora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-900 text-white py-10">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+      <!-- Logo footer -->
+      <div class="flex items-center">
+        <img src="https://019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98.claudeusercontent.com/v1/design/projects/019dd7f1-e204-7c6c-ba0c-70a8cf0bdb98/serve/uploads/BM%20REMATES%20WHITE-4ba05155.png?t=3be03a7ed9266a26aea86ec8effa2e34cef79656be505e0a49288534c6048728.dd9140b5-21c6-494e-8163-474f62d0574c.15a36625-d9d1-44d8-ab69-6372bf1be3d6.1777448047" alt="BM Remates" class="h-16 w-auto object-contain" />
+      </div>
+
+      <!-- Centro -->
+      <div class="text-center">
+        <p class="text-white/50 font-semibold uppercase tracking-widest text-xs mb-1">Envíos a toda la República</p>
+        <p class="text-white/30 text-xs">© 2026 BM Remates · Todos los derechos reservados</p>
+      </div>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/5215631808826" target="_blank" rel="noopener"
+         class="flex items-center gap-2 text-white font-bold text-base hover:text-green-400 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current shrink-0">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        56 3180 8826
+      </a>
+    </div>
+  </footer>
+
+  <!-- ===== BOTÓN FLOTANTE WHATSAPP ===== -->
+  <a href="https://wa.me/5215631808826?text=Hola,%20quiero%20pedir%20jerseys%20al%20mayoreo" target="_blank" rel="noopener"
+     class="wa-float fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 active:scale-95"
+     style="background:#25D366;"
+     aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" class="w-8 h-8 fill-white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
